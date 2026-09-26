@@ -55,7 +55,7 @@ header nav a {
 }
 
 header nav a:hover {
-  color: #ffffff;
+  color: var(--secondary-color);
 }
 
 .hero {
