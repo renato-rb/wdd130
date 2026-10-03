@@ -19,25 +19,24 @@ body {
   background-color: #fcfcfc;
 }
 
-header, main, footer {
+header,
+main,
+footer {
   width: 840px;
   margin: 0 auto;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
 }
 
-nav, p, section, article {
-  margin: 16px;
-  padding: 8px;
-}
-
+/* Header CSS Grid Layout */
 header {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
-  justify-content: space-between;
   background-color: var(--primary-color);
   padding: 10px 16px;
 }
@@ -47,17 +46,27 @@ header img {
   height: auto;
 }
 
+/* Nav CSS Flex Layout */
+header nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  gap: 10px;
+}
+
 header nav a {
   color: var(--accent2-color);
   text-decoration: none;
   padding: 8px 12px;
   font-weight: bold;
+  display: inline-block;
 }
 
 header nav a:hover {
   color: var(--secondary-color);
 }
 
+/* Hero Section */
 .hero {
   position: relative;
 }
@@ -96,6 +105,49 @@ header nav a:hover {
   border: 1px solid var(--accent1-color);
 }
 
+/* History Section */
+.history {
+  margin: 20px 0;
+  padding: 10px 0;
+}
+
+/* Adventures Section */
+.adventures {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.adventures h2 {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.adventure-gallery {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.adventure-gallery figure {
+  flex: 1;
+  text-align: center;
+}
+
+.adventure-gallery img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.adventure-gallery figcaption {
+  font-size: 0.85rem;
+  margin-top: 6px;
+  color: var(--accent1-color);
+  font-weight: bold;
+}
+
+/* Footer Section Layout */
 footer {
   display: flex;
   justify-content: space-between;
@@ -106,6 +158,11 @@ footer {
   margin-top: 20px;
 }
 
+.socialmedia {
+  display: flex;
+  align-items: center;
+}
+
 .socialmedia a {
   text-decoration: none;
 }
@@ -113,5 +170,5 @@ footer {
 .socialmedia img {
   width: 30px;
   height: auto;
-  margin-left: 8px;
+  margin-left: 12px;
 }
